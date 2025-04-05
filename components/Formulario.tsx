@@ -14,7 +14,7 @@ export default function Formulario({ onCadastrar, irParaLista }: Props) {
 
     const cadastrar = () => {
         if (nome && instrutor && plano) {
-            onCadastrar({ nome, instrutor, plano });
+            onCadastrar({ id: Date.now().toString(), nome, instrutor, plano });
             setNome('');
             setInstrutor('');
             setPlano('');

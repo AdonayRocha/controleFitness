@@ -1,8 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Aluno } from '../App';
 
-export default function ItemAluno({ nome, instrutor, plano }: Aluno) {
+interface Props {
+    nome: string;
+    instrutor: string;
+    plano: string;
+}
+
+export default function ItemAluno({ nome, instrutor, plano }: Props) {
     return (
         <View style={styles.card}>
             <Text style={styles.nomeTitulo}>{nome}</Text>

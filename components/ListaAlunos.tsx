@@ -12,9 +12,9 @@ export default function ListaAlunos({ alunos, irParaFormulario }: Props) {
     return (
         <View style={{ flex: 1 }}>
             <ScrollView>
-                {alunos.map((aluno, index) => (
+                {alunos.map((aluno) => (
                     <ItemAluno
-                        key={index}
+                        key={aluno.id} 
                         nome={aluno.nome}
                         instrutor={aluno.instrutor}
                         plano={aluno.plano}
